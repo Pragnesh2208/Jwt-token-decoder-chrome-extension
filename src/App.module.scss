@@ -1,0 +1,154 @@
+$font-family: "Roboto", sans-serif;
+$background-color: #f4f4f9;
+$primary-color: #2c3e50;
+$secondary-color: #3498db;
+$text-color: #333;
+$border-color: #ccc;
+$input-background-color: #fff;
+$input-border-color: #bbb;
+$input-focus-border-color: $secondary-color;
+$button-background-color: #3498db;
+$button-hover-background-color: #2980b9;
+$button-text-color: #fff;
+
+$scrollbar-width: 8px; // Make the scrollbar thinner
+$scrollbar-track-color: #e0e0e0; // Light gray track color
+$scrollbar-thumb-color: #6c757d; // Dark gray thumb color
+$scrollbar-thumb-hover-color: #343a40;
+
+// Styling for the entire scrollbar
+::-webkit-scrollbar {
+  width: $scrollbar-width;
+  height: $scrollbar-width;
+}
+
+// Styling for the scrollbar track
+::-webkit-scrollbar-track {
+  background: $scrollbar-track-color;
+  border-radius: 10px;
+}
+
+// Styling for the draggable part of the scrollbar
+::-webkit-scrollbar-thumb {
+  background: $scrollbar-thumb-color;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+// Styling for the scrollbar thumb when hovered
+::-webkit-scrollbar-thumb:hover {
+  background: $scrollbar-thumb-hover-color;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: $font-family;
+  color: $text-color;
+  padding: 20px;
+  background-color: $background-color;
+}
+
+h1 {
+  color: $primary-color;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.encodeArea,
+.decodeArea {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: $input-background-color;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  pre {
+    max-height: 200px;
+    overflow: auto;
+  }
+}
+
+h2 {
+  color: $primary-color;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1em;
+  color: $primary-color;
+  font-family: $font-family;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  color: $text-color;
+  border: 1px solid $input-border-color;
+  border-radius: 4px;
+  background-color: $input-background-color;
+  transition: border-color 0.3s;
+  font-family: $font-family;
+
+  &:focus {
+    border-color: $input-focus-border-color;
+    outline: none;
+  }
+}
+
+.children {
+  display: flex;
+  flex-direction: column;
+
+  .section {
+    margin-bottom: 20px;
+  }
+
+  h6 {
+    margin: 0;
+    font-size: 1.1em;
+    color: $primary-color;
+  }
+
+  pre {
+    padding: 10px;
+    background-color: $input-background-color;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: $font-family;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      padding: 5px;
+      font-size: 0.9rem;
+      color: $button-text-color;
+      background-color: $button-background-color;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: $button-hover-background-color;
+      }
+
+      svg {
+        font-size: 1em;
+      }
+    }
+  }
+}
